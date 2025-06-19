@@ -1,0 +1,176 @@
+/* === HEADER avec fond image === */
+header {
+  padding: 40px 20px;
+  text-align: center;
+  background: url('image/devanture_actuel.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+header * {
+  position: relative;
+  z-index: 2;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.logo-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 15px red;
+  object-fit: cover;
+}
+
+h1 {
+  background-color: rgba(51, 45, 45, 0.8);
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(135, 206, 250, 0.5);
+  display: block;
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+header p {
+  background-color: rgba(51, 45, 45, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: block;
+  margin: 10px auto 0 auto;
+  max-width: fit-content;
+  color: #fff;
+}
+
+/* === NAVIGATION principale (liens) === */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  background-color: #646668;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #cf1b1b;
+}
+
+/* === MAIN et sections === */
+main {
+  width: 95%; /* Prend 95% de la largeur disponible, et garde un peu de marge sur les côtés */
+  margin: 20px auto; /* Centre l'élément */
+  padding: 20px;
+  background: rgba(226, 223, 223, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #6e2c2c;
+  margin-bottom: 30px;
+}
+
+.feature-block {
+  background: #f9f9f9;
+  padding: 25px;
+  border-left: 6px solid #cf1b1b;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-block:hover {
+  transform: translateY(-5px);
+}
+
+.feature-block h3 {
+  margin-top: 0;
+  color: #444;
+}
+
+.feature-block p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* === FOOTER === */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  color: white;
+}
+
+
+
+
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  header h1,
+  header p {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  main {
+    width: 100%; /* Pour les petits écrans, on prend toute la largeur */
+    margin: 10px auto; /* Marge ajustée */
+    padding: 15px; /* Un peu moins de padding sur les petits écrans */
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .feature-block {
+    padding: 20px;
+  }
+}

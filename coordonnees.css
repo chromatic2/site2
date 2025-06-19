@@ -1,0 +1,180 @@
+/* === HEADER avec fond image === */
+header {
+  padding: 40px 20px;
+  text-align: center;
+  background: url('image/devanture_actuel.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.logo-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 15px red;
+  object-fit: cover;
+}
+
+.header-banner {
+  background-image: url('image/devanture_actuel.jpg'); /* Remplace par ton image réelle */
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  color: white;
+}
+
+header * {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  background-color: rgba(51, 45, 45, 0.8);
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(135, 206, 250, 0.5);
+  display: block;
+  margin: 0 auto 10px auto;
+  max-width: fit-content;
+}
+
+header p {
+  background-color: rgba(51, 45, 45, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
+  max-width: fit-content;
+  color: #fff;
+}
+
+.project-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.project-button {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 15px;
+  background-color: #646668;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #cf1b1b;
+  text-decoration: none;
+}
+
+
+
+/* === MAIN CONTENT === */
+main {
+  max-width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(226, 223, 223, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.coordonnees p,
+.plan p {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+a {
+  color: #c02929;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.reseaux {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-logo {
+  width: 40px;  /* Augmentée pour que les logos soient plus visibles */
+  height: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-logo:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* === FOOTER === */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  color: #fff;
+  margin: 5px 0;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  h1,
+  header p {
+    font-size: 1.2rem;
+  }
+
+  .menu-link {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .social-logo {
+    width: 30px;  /* Taille réduite sur mobile */
+    height: 30px;
+  }
+
+  .coordonnees p {
+    font-size: 1rem;
+  }
+}
